@@ -288,8 +288,16 @@
       <workItem from="1579596770667" duration="2125000" />
       <workItem from="1579653437684" duration="22125000" />
       <workItem from="1579739624944" duration="16218000" />
-      <workItem from="1580083306184" duration="1852000" />
+      <workItem from="1580083306184" duration="2702000" />
     </task>
+    <task id="LOCAL-00001" summary="时间：2020年1月27日 08:35:15&#10;提交人：马赟劼">
+      <created>1580085402893</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1580085402893</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -298,6 +306,9 @@
   <component name="VcsManagerConfiguration">
     <ignored-roots>
       <path value="$PROJECT_DIR$/../../LocalHub" />
+      <path value="$PROJECT_DIR$/../.." />
     </ignored-roots>
+    <MESSAGE value="时间：2020年1月27日 08:35:15&#10;提交人：马赟劼" />
+    <option name="LAST_COMMIT_MESSAGE" value="时间：2020年1月27日 08:35:15&#10;提交人：马赟劼" />
   </component>
 </project>
