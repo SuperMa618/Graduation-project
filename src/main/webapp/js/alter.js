@@ -24,7 +24,7 @@
 			+ "		<strong class=\"nbaDialogTitle\"></strong>"
 			+ "	</div>"
 			+ "	<div class=\"nbaDialogFt\">"
-			+ "		<a href=\"javascript:;\" class=\"nbaDialogBtn nbaDialogBtnPrimary\" id=\"dialog_ok2\">确定</a>"
+			+ "		<a href=\"javascript:;\" class=\"nbaDialogBtn nbaDialogBtnPrimary\" id=\"dialog_ok2\">Yes</a>"
 			+ "	</div></div></div>";
 	document.body.appendChild(div);
  

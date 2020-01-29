@@ -15,7 +15,6 @@
 <html class="no-js" lang="en">
 <head>
 </head>
-<script src="../../js/alter.js"></script>
 <script type="text/javascript">
     function yz() {
         var url = '/tz/xggrxx';
