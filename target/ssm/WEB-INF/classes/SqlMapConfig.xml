@@ -3,21 +3,26 @@
         "http://mybatis.org/dtd/mybatis-3-config.dtd">
 
 <configuration>
-    <environments default="mysql">
-        <environment id="mysql">
-            <transactionManager type="JDBC"></transactionManager>
-            <dataSource type="POOLED">
-                <property name="driver" value="com.mysql.jdbc.Driver"/>
-                <property name="url" value="jdbc:mysql:///test"/>
-                <property name="username" value="root"/>
-                <property name="password" value="123"/>
-            </dataSource>
-        </environment>
-    </environments>
+    <!-- 开启驼峰规则与下划线间的映射关系 -->
+    <settings>
+        <setting name="mapUnderscoreToCamelCase" value="true"/>
+    </settings>
+    <typeAliases>
+        <!-- type:类型的路径
+        alias：别名
+        <typeAlias type="com.ndky.bean.User" alias="user"/> -->
 
-    <mappers>
-<!--        <mapper class="com.ndky.dao.IUserDao"></mapper>-->
-        <package name="com.ndky.dao"/>
-    </mappers>
+        <!-- 批量别名配置
+        指定包名，mybatis自动扫描po类，自动定义别名，别名就是类名（首字母大写小写都可以） -->
+        <package name="com.ndky.bean"/>
+
+    </typeAliases>
+    <plugins>
+        <!-- com.github.pagehelper 为 PageHelper 类所在包名 -->
+        <plugin interceptor="com.github.pagehelper.PageHelper">
+            <!-- 设置数据库类型 Oracle,Mysql,MariaDB,SQLite,Hsqldb,PostgreSQL 六种数据库-->
+            <property name="dialect" value="mysql"/>
+        </plugin>
+    </plugins>
 
 </configuration>

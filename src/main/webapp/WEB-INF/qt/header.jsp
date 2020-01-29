@@ -83,7 +83,7 @@
                                 <c:choose>
                                     <c:when test="${user.userName != null}">
                                         <a href="/tz/grxx"><img style="width:30px;height:30px;"
-                                                                src=${user.head}>${user.userName}</a>
+                                                                src=${user.head}>&nbsp&nbsp&nbsp${user.userName}</a>
                                     </c:when>
                                     <c:otherwise>
                                         <img src="../img/mine.jpg">未登录</a>

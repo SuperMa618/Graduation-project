@@ -21,8 +21,8 @@ public class UserServiceImpl implements IUserService {
 
     //修改个人信息
     @Override
-    public void sgUser(User user) {
-        userDao.sgUser(user);
+    public void updateUser(User user) {
+        userDao.updateUser(user);
     }
 
     @Override

@@ -28,31 +28,39 @@
     </bean>
     <!--配置sqlsession工厂-->
     <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <!--注入数据库连接池-->
         <property name="dataSource" ref="dataSource"/>
+        <!-- 加载mybatis配置文件-->
+        <property name="configLocation" value="classpath:SqlMapConfig.xml"/>
+        <!-- 扫描Mapper配置文件-->
+        <property name="mapperLocations" value="classpath:com/ndky/dao/*.xml"/>
     </bean>
+
     <!--配置接口包-->
+    <!-- 使用mybatis的接口代理开发模式(必须保证接口和对应的mybatis的xml名称相同，且在一个文件夹内) -->
     <bean id="mapperScanner" class="org.mybatis.spring.mapper.MapperScannerConfigurer">
         <property name="basePackage" value="com.ndky.dao"/>
+        <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"/>
     </bean>
 
-<!-- 配置spring框架声明式事务管理-->
-<!--配置事务管理器-->
+    <!-- 配置spring框架声明式事务管理-->
+    <!--配置事务管理器-->
     <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
         <property name="dataSource" ref="dataSource"/>
-     </bean>
+    </bean>
 
-<!--配置事务通知-->
+    <!--配置事务通知-->
     <tx:advice id="txAdvice" transaction-manager="transactionManager">
         <tx:attributes>
-<!--            设置find开头方法为只读-->
+            <!--            设置find开头方法为只读-->
             <tx:method name="find*" read-only="true"/>
             <tx:method name="*" isolation="DEFAULT"/>
         </tx:attributes>
     </tx:advice>
 
-<!-- 配置AOP增强-->
+    <!-- 配置AOP增强-->
     <aop:config>
-<!--       advice-ref="txAdvice"引用事务通知   pointcut切入点表达式-->
+        <!--       advice-ref="txAdvice"引用事务通知   pointcut切入点表达式-->
         <aop:advisor advice-ref="txAdvice" pointcut="execution(* com.ndky.service.Impl.*ServiceImpl.*(..))"/>
     </aop:config>
 

@@ -208,7 +208,7 @@ public class UserController {
                 head = user1.getHead();
             }
             User user2 = new User(userId, userName, passWord, sex, tel, head);
-            userService.sgUser(user2);
+            userService.updateUser(user2);
             request.getSession().setAttribute("user", user2);
         }
         return "qt/grxx";

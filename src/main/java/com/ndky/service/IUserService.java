@@ -16,5 +16,5 @@ public interface IUserService {
 
     User findUserByPwd(String passWord);
 
-    void sgUser(User user);
+    void updateUser(User user);
 }
