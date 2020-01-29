@@ -1,4 +1,4 @@
-window.alert = function(msg, callback) {
+锘縲indow.alert = function(msg, callback) {
 	var div = document.createElement("div");
 	div.innerHTML = "<style type=\"text/css\">"
 			+ ".nbaMask { position: fixed; z-index: 1000; top: 0; right: 0; left: 0; bottom: 0; background: rgba(0, 0, 0, 0.5); }                                                                                                                                                                       "
@@ -19,12 +19,12 @@ window.alert = function(msg, callback) {
 			+ "	<div class=\"nbaDialogHd\">"
 			+ "		<strong class=\"nbaDialogTitle\"></strong>"
 			+ "	</div>"
-			+ "	<div class=\"nbaDialogBd\" id=\"dialog_msg2\">弹窗内容，告知当前状态、信息和解决方法，描述文字尽量控制在三行内</div>"
+			+ "	<div class=\"nbaDialogBd\" id=\"dialog_msg2\">杈撳叆淇℃伅锛屼笉瓒呰繃涓夎</div>"
 			+ "	<div class=\"nbaDialogHd\">"
 			+ "		<strong class=\"nbaDialogTitle\"></strong>"
 			+ "	</div>"
 			+ "	<div class=\"nbaDialogFt\">"
-			+ "		<a href=\"javascript:;\" class=\"nbaDialogBtn nbaDialogBtnPrimary\" id=\"dialog_ok2\">确定</a>"
+			+ "		<a href=\"javascript:;\" class=\"nbaDialogBtn nbaDialogBtnPrimary\" id=\"dialog_ok2\">纭畾</a>"
 			+ "	</div></div></div>";
 	document.body.appendChild(div);
  

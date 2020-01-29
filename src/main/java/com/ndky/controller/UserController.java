@@ -111,8 +111,8 @@ public class UserController {
     @RequestMapping(value = "/mmJy", method = RequestMethod.POST)
     public Message mmJy(HttpServletRequest request) {
         String passWord = request.getParameter("passWord");
-        User user = userService.findUserByPwd(passWord);//从数据库查找前端出来的用户
-        if (user != null) {//user为空，说明没有找到该用户，可以注册。反之。
+        User user = (User)request.getSession().getAttribute("user");
+        if (user.getPassWord().equals(passWord)) {//user为空，说明没有找到该用户，可以注册。反之。
             return new Message("yes");//然后返回给前端执行success方法。
         }
         return new Message("no");
