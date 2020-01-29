@@ -7,8 +7,8 @@
 <head>
 </head>
 <script type="text/javascript">
-    var flag = false;
-    var flag1 = false;
+    var flag = true;//判断用户名是否正确标志
+    var flag1 = false;//判断电话是否正确标志
     function yhm() {
         var userName = $("#userName").val();
         if (userName == "") {
